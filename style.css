@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -38,6 +39,17 @@ body {
   padding: 15px;
   margin: 0;
 }
+/* .clearfix::after{
+  content: "";
+  display: block;
+  clear:both;
+} */
+
+.container {
+  /*   background-color: red; */
+  display: flex;
+  gap: 40px;
+}
 
 .price {
   font-size: 24px;
@@ -48,17 +60,16 @@ body {
   color: #777;
   font-size: 12px;
   font-weight: bold;
-  margin-bottom: 20px;
 }
 
 .ready {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .more-info:link,
 .more-info:visited {
   color: black;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   display: inline-block;
 }
 
@@ -67,12 +78,12 @@ body {
   text-decoration: none;
 }
 
-/* .colors {
-} */
+.colors {
+  display: flex;
+  gap: 10px;
+}
 
 .color {
-  display: inline-block;
-  margin-right: 10px;
   width: 22px;
   height: 22px;
 }
@@ -104,13 +115,11 @@ body {
   text-transform: uppercase;
   font-size: 16px;
   margin-bottom: 15px;
-  margin-top: 30px;
 }
 
 .details-list {
   list-style-type: square;
   margin-left: 20px;
-  margin-bottom: 15px;
 }
 .details-list li {
   margin-bottom: 10px;
@@ -131,4 +140,28 @@ body {
 .add-cart:hover {
   background-color: white;
   color: black;
+}
+
+/* FLOATS */
+
+/* .product-img {
+} */
+
+.product-info {
+  margin-top: 20px;
+  flex: 1;
+}
+
+.product-details {
+  flex: 1;
+  margin-top: 20px;
+}
+
+/* FLEXBOX */
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
